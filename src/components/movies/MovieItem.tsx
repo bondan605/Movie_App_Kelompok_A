@@ -45,9 +45,7 @@ const MovieItem = ({ movie, size, coverType }: MovieItemProps): JSX.Element => {
     </TouchableOpacity>
   );
 };
-
 export default MovieItem;
-
 const styles = StyleSheet.create({
   backgroundImage: {
     marginRight: 4,
