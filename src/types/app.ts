@@ -11,19 +11,6 @@ export interface MovieItemProps {
   coverType: 'poster' | 'backdrop'
 }
 
-export interface MovieDetailProps {
-  route: {
-    params: {
-      id: number;
-    };
-  };
-  size: {
-    width: number;
-    height: number;
-  };
-  coverType: "backdrop" | "poster";
-}
-
 export interface FavoriteContextProps {
   favoriteMovies: Movie[];
   addFavorite: (movie: Movie) => void;
@@ -65,4 +52,13 @@ export interface Movie {
    video: boolean
    vote_average: number
    vote_count: number
+}
+
+export interface Genre {
+  genres: GenreElement[];
+}
+
+export interface GenreElement {
+  id: number;
+  name: string;
 }
