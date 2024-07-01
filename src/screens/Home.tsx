@@ -1,33 +1,32 @@
-import React from "react"; // Mengimpor React dari modul react
-import { ScrollView, View, StatusBar, StyleSheet } from "react-native"; // Mengimpor beberapa komponen dari react-native
-import type { MovieListProps } from "../types/app"; // Mengimpor tipe MovieListProps dari folder types
-import MovieList from "../components/movies/MovieList"; // Mengimpor komponen MovieList dari folder components
+import React from "react";
+import { ScrollView, View, StatusBar, StyleSheet } from "react-native";
+import type { MovieListProps } from "../types/app";
+import MovieList from "../components/movies/MovieList";
 
 const movieLists: MovieListProps[] = [
   {
-    title: "Now Playing in Theater", // Judul untuk daftar film "Now Playing in Theater"
-    path: "movie/now_playing?language=en-US&page=1", // Jalur API untuk film yang sedang diputar di bioskop
-    coverType: "backdrop", // Tipe gambar sampul adalah backdrop
+    title: "Now Playing in Theater",
+    path: "movie/now_playing?language=en-US&page=1",
+    coverType: "backdrop",
   },
   {
-    title: "Upcoming Movies", // Judul untuk daftar film "Upcoming Movies"
-    path: "movie/upcoming?language=en-US&page=1", // Jalur API untuk film yang akan datang
-    coverType: "poster", // Tipe gambar sampul adalah poster
+    title: "Upcoming Movies",
+    path: "movie/upcoming?language=en-US&page=1",
+    coverType: "poster",
   },
   {
-    title: "Top Rated Movies", // Judul untuk daftar film "Top Rated Movies"
-    path: "movie/top_rated?language=en-US&page=1", // Jalur API untuk film dengan rating tertinggi
-    coverType: "poster", // Tipe gambar sampul adalah poster
+    title: "Top Rated Movies",
+    path: "movie/top_rated?language=en-US&page=1",
+    coverType: "poster",
   },
   {
-    title: "Popular Movies", // Judul untuk daftar film "Popular Movies"
-    path: "movie/popular?language=en-US&page=1", // Jalur API untuk film populer
-    coverType: "poster", // Tipe gambar sampul adalah poster
+    title: "Popular Movies",
+    path: "movie/popular?language=en-US&page=1",
+    coverType: "poster",
   },
-]; // Deklarasi array movieLists yang berisi beberapa objek MovieListProps
+];
 
 const Home = (): JSX.Element => {
-  // Mendefinisikan komponen Home sebagai fungsi yang mengembalikan JSX.Element
   return (
     <ScrollView>
       <View style={styles.container}>

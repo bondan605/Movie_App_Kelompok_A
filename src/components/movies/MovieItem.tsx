@@ -1,12 +1,12 @@
-import React from "react";
 import {
   ImageBackground,
-  Text,
   StyleSheet,
+  Text,
   View,
   TouchableOpacity,
 } from "react-native";
 import { useNavigation, StackActions } from "@react-navigation/native";
+import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import type { MovieItemProps } from "../../types/app";
@@ -14,7 +14,6 @@ import type { MovieItemProps } from "../../types/app";
 const MovieItem = ({ movie, size, coverType }: MovieItemProps): JSX.Element => {
   const navigation = useNavigation();
   const pushAction = StackActions.push("MovieDetail", { id: movie.id });
-
   return (
     <TouchableOpacity
       onPress={() => {
@@ -46,7 +45,7 @@ const MovieItem = ({ movie, size, coverType }: MovieItemProps): JSX.Element => {
     </TouchableOpacity>
   );
 };
-
+export default MovieItem;
 const styles = StyleSheet.create({
   backgroundImage: {
     marginRight: 4,
@@ -75,5 +74,3 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
 });
-
-export default MovieItem;
