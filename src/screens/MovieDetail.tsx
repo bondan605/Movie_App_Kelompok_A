@@ -15,9 +15,9 @@ import AsyncStorage from "@react-native-async-storage/async-storage"; // Mengimp
 import { useIsFocused } from "@react-navigation/native"; // Mengimpor useIsFocused untuk mengetahui apakah layar saat ini sedang difokuskan
 import { API_ACCESS_TOKEN } from "@env"; // Mengimpor token akses API dari variabel lingkungan
 import MovieList from "../components/movies/MovieList"; // Mengimpor komponen MovieList dari folder components
-import type { MovieDetailProps, Movie } from "../types/app"; // Mengimpor tipe data untuk props dan objek Movie
+import type { Movie } from "../types/app"; // Mengimpor tipe data untuk props dan objek Movie
 
-const MovieDetail = ({ route }: MovieDetailProps): JSX.Element => {
+const MovieDetail = ({ route }: any): JSX.Element => {
   // Mendefinisikan komponen MovieDetail yang menerima props route
 
   const { id } = route.params; // Mengambil parameter id dari route
